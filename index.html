@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>웹카페 - 웹접근성 및 웹표준, HTML5, CSS3</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/common/favicon.ico">
+</head>
+
+<body>
+  <div class="skip-nav">
+    <a href="#">본문 바로가기</a>
+  </div>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="logo">
+        <a href="#">
+          <img src="images/webcafe-logo.png" alt="Web Cafe">
+        </a>
+      </h1>
+      <ul class="member">
+        <li><a href="#" class="login">로그인</a></li>
+        <li><a href="#" class="signup">회원가입</a></li>
+        <li><a href="#" class="community">커뮤니티</a></li>
+      </ul>
+      <div class="search">
+        <h2 class="readable-hidden">통합 검색</h2>
+        <form action="javascript:alert('검색이 완료되었습니다.');" id="search-form">
+          <fieldset>
+            <legend>검색 폼</legend>
+            <label for="keyward">자료검색</label>
+            <input type="search" id="keyward" required placeholder="검색어를 입력하세요.">
+            <button type="submit" class="btn-search">검색</button>
+          </fieldset>
+        </form>
+      </div>
+    </header>
+    <nav class="navigation">
+      <h2 class="readable-hidden">메인 메뉴</h2>
+      <div class="menubar-container">
+        <button type="button" class="btn-menubar">메인메뉴 열기</button>
+        <span class="menubar menubar-top"></span>
+        <span class="menubar menubar-middle"></span>
+        <span class="menubar menubar-bottom"></span>
+      </div>
+      <ul class="main-menu">
+        <li>
+          <span>HTML에 대해</span>
+          <ul class="sub-menu about-html">
+            <li><a href="#">HTML5 소개</a></li>
+            <li><a href="#">레퍼런스 소개</a></li>
+            <li><a href="#">활용예제</a></li>
+          </ul>
+        </li>
+        <li>
+          <span>CSS에 대해</span>
+          <ul class="sub-menu about-css">
+            <li><a href="#">CSS 소개</a></li>
+            <li><a href="#">CSS2 VS CSS3</a></li>
+            <li><a href="#">CSS 애니메이션</a></li>
+          </ul>
+        </li>
+        <li>
+          <span>웹표준/웹접근성</span>
+          <ul class="sub-menu web-standards">
+            <li><a href="#">웹표준이란?</a></li>
+            <li><a href="#">웹접근성의 개요</a></li>
+            <li><a href="#">HTML5의 현재와 미래</a></li>
+          </ul>
+        </li>
+        <li>
+          <span>묻고 답하기</span>
+          <ul class="sub-menu qna">
+            <li><a href="#">묻고 답하기</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">1대1 질문</a></li>
+          </ul>
+        </li>
+        <li>
+          <span>자료실</span>
+          <ul class="sub-menu archive">
+            <li><a href="#">공개 자료실</a></li>
+            <li><a href="#">이미지 자료실</a></li>
+            <li><a href="#">예제 자료실</a></li>
+
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main class="main-content">
+      <div class="recommend-book">
+        <h2 class="recommend-book-heading main-content-heading">
+          추천 서적<span>Recommend Book</span>
+        </h2>
+        <figure>
+          <img src="images/book_rwd.jpg" alt="웹표준 핵심 가이드북 개정판" title="책에 대한 정보는 하단 내용 참조">
+          <figcaption>웹표준 핵심가이드북 HTML5+CSS3</figcaption>
+        </figure>
+        <dl>
+          <dt>저자</dt>
+          <dd>김데레사</dd>
+          <dt class="readable-hidden">평점</dt>
+          <dd class="recommend-book-grade" aria-label="5점 만점에 5점">★★★★★</dd>
+        </dl>
+        <p>웹표준 핵심 가이드북 HTML5&amp;CSS3 개정판이 새로운 예제로 출간되었습니다. 많은 성원 부탁드립니다.</p>
+      </div>
+      <div class="news">
+        <h2 class="news-heading main-content-heading">
+          새소식 <span>WebCafe News</span>
+        </h2>
+        <video controls poster="media/poster.jpg" preload="none" width="800" height="448">
+                    <source src="media/google-developer-stories.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+                    <track src="media/video-subtitles-en.vtt" kind="captions" srclang="en" label="English captions" default="">
+                </video>
+        <p>웹표준 핵심가이드 북 개정판 출판을 기념하여 저자의 강의가 있었습니다. 많은 분들이 강의에 참석을 해주셨으며 웹에 대한 많은 이야기를 나눌 수 있는 소중한 시간이었습니다.</p>
+        <time datetime="2018-01-31">2018.01.31</time>
+      </div>
+      <div class="board">
+        <h2 class="board-heading main-content-heading">
+          게시판 <span>Webcafe Board</span>
+        </h2>
+
+        <ul>
+          <li>
+            <a href="#">HTML의 모든것을 알려주마 샘플 활용법</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+          <li>
+            <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+          <li>
+            <a href="#">KWCAG2.0 소식</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+          <li>
+            <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+          <li>
+            <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+            <time datetime="2018-01-31T14:03:30">2018.01.31</time>
+          </li>
+        </ul>
+        <a href="#" class="board-more" title="공지사항">더보기</a>
+
+      </div>
+      <div class="favorite-site">
+        <h2 class="favorite-site-heading main-content-heading">
+          인기 사이트<span>Favorite Site</span>
+        </h2>
+        <ol>
+          <li><a href="#">Learn CSS Layout</a></li>
+          <li><a href="#">Flexbox Froggy</a></li>
+          <li><a href="#">Grid Garden</a></li>
+          <li><a href="#">MDN web doc</a></li>
+        </ol>
+      </div>
+      <article class="twitter">
+        <h2 class="twitter-heading main-content-heading">
+          웹카페 트위터 <span>WebCafe Twitter</span>
+        </h2>
+        <div class="twitter-profile">
+          <img src="images/seulbinim.jpg" alt="">
+        </div>
+        <a href="http://twitter.com/seulbinim" title="seulbinim의 트위터로 연결됩니다.">김데레사 <span>@seulbinim</span></a>
+        <p>웹표준 핵심 가이드북 개정판 출시 기념으로 세미나를 준비했습니다. 참석을 원하시는 분들은 트위터로 문의하시기 바랍니다.</p>
+        <time datetime="2018-01-31T14:30:00+09:00">5분전</time>
+      </article>
+    </main>
+    <article class="slogan">
+      <h2 class="slogan-heading" title="웹카페에서 웹표준을">
+        웹카페 슬로건
+      </h2>
+      <p class="slogan-content">
+        <q cite="http://w3.org/WAI/">
+                    The power of the Web is in its universality, 
+                    Access by everyone regardless of disability 
+                    is an essential aspect.</q>
+        <span>Tim Berners - Lee , W3C Director and 
+                    inventor of the World Wide Web </span>
+      </p>
+      <footer class="readable-hidden">
+        출처 : http://w3.org/WAI/
+      </footer>
+    </article>
+    <footer class="footer">
+      <address>
+        <span>
+            서울시 마포구 상수동 123-12 한주빌딩 5층
+        </span>
+        <span>
+            전화: 02-234-5678
+        </span>
+        <span>
+            이메일: <a href="mailto:seulbinim@gmail.com">seulbinim@gmail.com</a>
+        </span>
+        <span class="copyright">
+            Copyright since &copy; 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.
+        </span>
+    </address>
+    </footer>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/webcafe.js"></script>
+</body>
+
+</html>
