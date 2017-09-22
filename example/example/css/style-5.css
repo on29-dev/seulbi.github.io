@@ -1,0 +1,53 @@
+/* ----------- flexbox ----------- */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap; }
+
+.header {
+  order: 1; }
+
+.content {
+  display: flex;
+  flex-flow: column wrap;
+  height: 30em;
+  order: 2; }
+
+.box1 {
+  flex-grow: 8; }
+
+.box2 {
+  flex-grow: 1; }
+
+.box3 {
+  flex-grow: 3; }
+
+.primary {
+  order: 3; }
+
+.secondary {
+  order: 4; }
+
+.footer {
+  order: 5; }
+
+/* ----------- media queries --------------------- */
+@media screen and (min-width: 600px) {
+  .content {
+    width: 67%;
+    order: 3; }
+
+  .primary {
+    width: 33%;
+    padding: 1em 3.333%;
+    order: 2; }
+
+  .box1 {
+    flex-grow: 6;
+    order: 1; }
+
+  .box2 {
+    order: 3; }
+
+  .box3 {
+    flex-grow: 1;
+    order: 2; } }

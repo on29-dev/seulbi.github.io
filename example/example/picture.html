@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>picture 요소의 사용</title>
+	<meta name="viewport" content="width=device-width">
+	<style>
+		.wrapper{
+			background: #ffc;
+			padding: 20px;
+			margin: 20px;			
+		}
+		.subject{
+			text-align: center;
+			font-size: 1em;
+		}
+		.contents-box{
+			width: 100%;
+		}
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	</style>	
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="subject">picture 사용 예</h1>
+		<div class="contents-box">
+			<picture>
+			  <source srcset="images/large.jpg" media="(min-width: 1025px)">
+			  <source srcset="images/medium.jpg" media="(min-width: 481px)">
+			  <source srcset="images/small.jpg" media="(min-width: 1px) and (max-width: 480px)">
+			  <img src="images/normal.jpg" alt="picturefill demo">
+			</picture>
+		</div>
+		
+	</div>
+	
+	
+</body>
+</html>
