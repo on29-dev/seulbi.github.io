@@ -10,6 +10,7 @@ $(document).ready(function() {
   var btn_menubar = $('.btn-menubar, .menubar');
   var btn = $('.btn-menubar');
   var menu = $('.main-menu');
+  var last_item = $('.main-menu > li:last-child li:last-child a')
 
   btn_menubar.on('click', function() {
     menu.toggleClass('menu-act');
@@ -28,4 +29,9 @@ $(document).ready(function() {
   btn_menubar.on('click', function() {
     container.toggleClass('menubar-act');
   });
+
+  last_item.on('focusout', function() {
+    menu.removeClass('menu-act');
+    container.removeClass('menubar-act');
+  })
 });

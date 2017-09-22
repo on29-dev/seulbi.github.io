@@ -25,34 +25,6 @@ legend {
   left: -9999px;
 }
 
-.main-content {
-  background: red;
-}
-
-.recommend-book {
-  background: orange;
-}
-
-.news {
-  background: darkgreen;
-}
-
-.board {
-  background: gold;
-}
-
-.favorite-site {
-  background: skyblue;
-}
-
-.twitter {
-  background: olive;
-}
-
-.slogan {
-  background: aqua;
-}
-
 .footer {
   background: lime;
 }
@@ -83,14 +55,6 @@ a:focus {
 }
 
 
-/* 추천서적 커버이미지 */
-
-.recommend-book-cover {
-  width: 50%;
-  background: black;
-}
-
-
 /* 본문 스타일 */
 
 html {
@@ -102,6 +66,10 @@ body {
   background: #fff;
   font-family: "Spoqa Han Sans", sans-serif;
   font-weight: 400;
+}
+
+p {
+  line-height: 1.5;
 }
 
 
@@ -122,6 +90,208 @@ body {
 .slogan,
 .footer {
   width: 100%;
+}
+
+
+/* 메인 콘텐츠 섹션 공통 여백 */
+
+.recommend-book,
+.news,
+.board,
+.favorite-site,
+.twitter {
+  margin: 2rem 0
+}
+
+
+/* 메인 콘텐츠 제목 공통 */
+
+.main-content-heading {
+  background: url("images/sprite_main.png") no-repeat;
+  height: 60px;
+  padding-left: 60px;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.main-content-heading span {
+  display: block;
+}
+
+.recommend-book-heading {
+  background-position: ;
+}
+
+.news-heading {
+  background-position: 0 -230px;
+}
+
+.board-heading {
+  background-position: 0 -115px;
+}
+
+.favorite-site-heading {
+  background-position: 0 -345px;
+}
+
+.twitter-heading {
+  background-position: 0 -460px;
+}
+
+.recommend-book-heading span {
+  color: #abd375;
+}
+
+.news-heading span {
+  color: #e8ca58;
+}
+
+.board-heading span {
+  color: #c7b39a;
+}
+
+.favorite-site-heading span {
+  color: #eea60a;
+}
+
+.twitter-heading span {
+  color: #6aaee6;
+}
+
+
+/* 추천 서적 */
+
+.recommend-book-cover {
+  margin: 1rem auto;
+  width: 50%;
+}
+
+.recommend-book-cover,
+.recommend-book-detail {
+  text-align: center;
+}
+
+.recommend-book-detail * {
+  display: inline-block;
+}
+
+.recommend-book-grade {
+  display: block;
+  font-size: 20px;
+  color: #abd375;
+  margin-bottom: 1rem;
+}
+
+
+/* 새소식 */
+
+.new video {
+  margin: 1rem 0;
+}
+
+.news time {
+  display: block;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+
+/* 게시판 */
+
+.board {
+  position: relative;
+}
+
+.board ul {
+  margin-top: 1rem;
+}
+
+.board li {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.board li a {
+  width: calc(100% - 100px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+
+/* 트위터 */
+
+.twitter-profile {
+  width: 20%;
+  float: right;
+  margin: 2rem 0 0 2rem;
+}
+
+.twitter-profile img {
+  border: 1px solid #aaa;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.twitter a {
+  margin-top: 1rem 0;
+  display: block;
+}
+
+.twitter time {
+  display: block;
+  text-align: right;
+  clear: both;
+}
+
+
+/* 인기사이트 */
+
+.favorite-site ol {
+  margin-left: 50px;
+  overflow: hidden;
+}
+
+.favorite-site li {
+  counter-increment: number;
+  margin: 0.5em 0;
+}
+
+.favorite-site li:before {
+  content: counter(number, decimal);
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  background: #ec6a50;
+  display: inline-block;
+  margin-right: 0.5em;
+  color: #fff;
+  border-radius: 50%;
+}
+
+
+/* 슬로건 */
+
+.slogan-content q {
+  font-weight: 700;
+}
+
+
+/* 푸터 */
+
+.footer {
+  background: #988574;
+  color: #fff;
+  padding: 2rem;
 }
 
 
@@ -352,6 +522,29 @@ body {
     left: 0;
     padding: 30px 30px 0 30px;
   } */
+  /* 메인 콘텐츠 여백 및 구분선 */
+  .recommend-book,
+  .news,
+  .board,
+  .favorite-site,
+  .twitter {
+    margin: 2rem;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 1rem;
+  }
+  .slogan {
+    padding: 0 2rem 2rem 2rem;
+  }
+  .slogan-heading {
+    position: absolute;
+    left: -9999em;
+  }
+  .address span {
+    display: block;
+  }
+  .copyright {
+    margin-top: 1rem;
+  }
 }
 
 
@@ -519,5 +712,45 @@ body {
   }
   .twitter {
     width: 36%;
+  }
+  .recommend-book,
+  .news,
+  .board,
+  .favorite-site,
+  .twitter {
+    margin: 1rem 0;
+  }
+  /* 슬로건 */
+  .slogan {
+    margin-top: 2rem;
+    position: relative;
+  }
+  .slogan-heading {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 110px;
+    height: 83px;
+    padding-top: 83px;
+    overflow: hidden;
+    background: url("images/coffee.png") no-repeat;
+  }
+  .slogan-content {
+    margin-left: 130px;
+    padding: 2rem 0;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+  .address {
+    width: 700px;
+  }
+  .address span {
+    margin-right: 2rem;
+  }
+  .copyright {
+    margin-top: 1rem;
+    display: block;
   }
 }
